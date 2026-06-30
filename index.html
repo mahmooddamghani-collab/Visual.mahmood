@@ -19,7 +19,85 @@
 --accent2:#8b5cf6;
 --accent3:#22c55e;
 }
+html{
+scroll-behavior:smooth;
+}
 
+body{
+-webkit-overflow-scrolling: touch;
+}
+.portfolio{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:18px;
+}
+
+/* 🔥 LIQUID GLASS CARD */
+.glass-box{
+text-decoration:none;
+color:white;
+
+padding:18px;
+border-radius:16px;
+
+/* glass effect */
+background:rgba(255,255,255,0.06);
+backdrop-filter: blur(18px);
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.4),
+inset 0 1px 0 rgba(255,255,255,0.08);
+
+font-size:13px;
+line-height:1.4;
+
+transition:0.25s ease;
+
+position:relative;
+overflow:hidden;
+}
+
+/* subtitle */
+.glass-box span{
+display:block;
+margin-top:6px;
+font-size:11px;
+color:rgba(255,255,255,0.65);
+}
+
+/* hover effect */
+.glass-box:hover{
+transform:translateY(-4px) scale(1.02);
+border-color:rgba(255,255,255,0.3);
+box-shadow:
+0 15px 35px rgba(0,0,0,0.5),
+0 0 20px rgba(79,140,255,0.2);
+}
+
+/* shine animation (Apple feel) */
+.glass-box::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-60%;
+width:60%;
+height:200%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.15),
+transparent
+);
+transform:rotate(25deg);
+transition:0.5s;
+}
+
+.glass-box:hover::before{
+left:120%;
+}
 /* BODY */
 body{
 margin:0;
@@ -200,19 +278,19 @@ h1{font-size:20px;}
   
 <div class="portfolio">
 
-<a href="https://drive.google.com/drive/folders/1BHmJd9W7uUHbh3UgoHScvW43WnbRmlKu?usp=drive_link" class="box">
-Horizontal Edits<br>YouTube / Ads / Teasers
+<a href="https://drive.google.com/drive/folders/1BHmJd9W7uUHbh3UgoHScvW43WnbRmlKu?usp=drive_link" class="glass-box">
+Horizontal Edits<br><span>YouTube / Ads / Teasers</span>
 </a>
 
-<a href="https://drive.google.com/drive/folders/16z4MGK1tU7AgjYUhTHe0VCKFTNRpyLFd?usp=drive_link" class="box">
-Vertical Edits<br>Reels / Shorts
+<a href="https://drive.google.com/drive/folders/16z4MGK1tU7AgjYUhTHe0VCKFTNRpyLFd?usp=drive_link" class="glass-box">
+Vertical Edits<br><span>Reels / Shorts</span>
 </a>
 
-<a href="https://drive.google.com/drive/folders/1g7QQyYrysqs_k47eY_ihnEpEXfhisRGU?usp=drive_link" class="box">
+<a href="https://drive.google.com/drive/folders/1g7QQyYrysqs_k47eY_ihnEpEXfhisRGU?usp=drive_link" class="glass-box">
 Medical Edits
 </a>
 
-<a href="https://drive.google.com/drive/folders/1kDrbvcwtQLB_GOGjUtQ4M0AcTg7bEcy8?usp=drive_link" class="box">
+<a href="https://drive.google.com/drive/folders/1kDrbvcwtQLB_GOGjUtQ4M0AcTg7bEcy8?usp=drive_link" class="glass-box">
 Graphic Design
 </a>
 
