@@ -6,72 +6,166 @@
 <title>Mahmood Damghani</title>
 
 <style>
+
+/* 🎨 COLOR SYSTEM (Apple-like) */
+:root{
+--bg1:#0b0f1a;
+--bg2:#0f172a;
+--card:rgba(255,255,255,0.06);
+--stroke:rgba(255,255,255,0.12);
+--text:#ffffff;
+--muted:rgba(255,255,255,0.65);
+--accent1:#4f8cff;
+--accent2:#8b5cf6;
+--accent3:#22c55e;
+}
+
+/* BODY */
 body{
 margin:0;
-font-family: Arial;
-background:#0b0b10;
-color:white;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+background: radial-gradient(circle at top, var(--bg2), var(--bg1));
+color:var(--text);
 display:flex;
 justify-content:center;
-align-items:center;
-min-height:100vh;
+padding:20px;
 }
 
-/* کارت اصلی */
+/* CARD */
 .card{
-width:90%;
-max-width:420px;
-background:rgba(255,255,255,0.05);
-backdrop-filter: blur(12px);
-border:1px solid rgba(255,255,255,0.1);
-border-radius:20px;
-padding:25px;
-text-align:center;
-box-shadow:0 0 30px rgba(0,0,0,0.6);
+width:100%;
+max-width:520px;
+background:var(--card);
+backdrop-filter: blur(20px);
+border:1px solid var(--stroke);
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
 }
 
-/* عکس پروفایل - مهم */
-.profile{
-width:90px;
-height:90px;
-border-radius:50%;
+/* HEADER */
+.header{
+width:100%;
+height:170px;
 object-fit:cover;
 display:block;
-margin:0 auto 15px auto;
-border:2px solid rgba(255,255,255,0.2);
-box-shadow:0 0 20px rgba(0,0,0,0.5);
+filter:brightness(0.9);
 }
 
-/* اسم */
+/* CONTENT */
+.content{
+padding:22px;
+text-align:center;
+}
+
+/* PROFILE */
+.profile{
+width:92px;
+height:92px;
+border-radius:50%;
+object-fit:cover;
+margin:-55px auto 10px auto;
+display:block;
+border:3px solid rgba(255,255,255,0.15);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* NAME */
 h1{
 margin:10px 0 0;
 font-size:22px;
+letter-spacing:0.5px;
 }
 
-/* زیرعنوان */
 p{
-margin:5px 0 20px;
-opacity:0.7;
+margin:5px 0 18px;
+color:var(--muted);
 font-size:13px;
 }
 
-/* دکمه‌ها */
-.btn{
-display:block;
-margin:10px 0;
-padding:12px;
-border-radius:12px;
-text-decoration:none;
-color:white;
-background:rgba(255,255,255,0.08);
-border:1px solid rgba(255,255,255,0.1);
-transition:0.3s;
+/* SOCIAL GRID */
+.social-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-bottom:18px;
 }
 
-.btn:hover{
-background:rgba(255,255,255,0.2);
-transform:scale(1.03);
+.social{
+padding:11px;
+border-radius:14px;
+background:linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+border:1px solid var(--stroke);
+text-decoration:none;
+color:var(--text);
+font-size:13px;
+transition:0.25s ease;
 }
+
+.social:hover{
+transform:translateY(-2px);
+border-color:rgba(255,255,255,0.25);
+background:rgba(255,255,255,0.12);
+}
+
+/* CONTACT BUTTONS */
+.contact{
+display:block;
+padding:14px;
+margin:10px 0;
+border-radius:14px;
+background:linear-gradient(135deg, rgba(79,140,255,0.15), rgba(139,92,246,0.12));
+border:1px solid var(--stroke);
+text-decoration:none;
+color:var(--text);
+transition:0.25s ease;
+}
+
+.contact:hover{
+transform:translateY(-2px);
+background:linear-gradient(135deg, rgba(79,140,255,0.25), rgba(139,92,246,0.18));
+}
+
+/* PORTFOLIO GRID */
+.portfolio{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:18px;
+}
+
+.box{
+padding:18px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+border:1px solid var(--stroke);
+font-size:13px;
+transition:0.25s ease;
+}
+
+.box:hover{
+transform:scale(1.02);
+border-color:rgba(255,255,255,0.25);
+}
+
+/* FOOTER */
+.footer-text{
+margin-top:20px;
+font-size:12px;
+color:var(--muted);
+line-height:1.6;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width:600px){
+
+.header{height:130px;}
+.profile{width:80px;height:80px;margin:-45px auto 10px auto;}
+.social-grid{grid-template-columns:1fr;}
+.portfolio{grid-template-columns:1fr;}
+h1{font-size:20px;}
+}
+
 </style>
 </head>
 
@@ -79,39 +173,57 @@ transform:scale(1.03);
 
 <div class="card">
 
-<!-- پروفایل -->
-<img src="logo.png" class="profile">
+<img src="header.jpeg" class="header">
+
+<div class="content">
+
+<img src="profile.jpg" class="profile">
 
 <h1>Mahmood Damghani</h1>
 <p>Video Editor | Motion Designer</p>
 
-<!-- دکمه‌ها -->
-<a class="btn" id="instagram" target="_blank">📷 Instagram</a>
-<a class="btn" id="youtube" target="_blank">▶️ YouTube</a>
-<a class="btn" id="telegram" target="_blank">✈️ Telegram</a>
-<a class="btn" id="whatsapp" target="_blank">💬 WhatsApp</a>
-<a class="btn" id="portfolio" target="_blank">🌐 Portfolio</a>
-<a class="btn" id="email">📧 Email</a>
+<div class="social-grid">
+<a class="social" id="linkedin">LinkedIn</a>
+<a class="social" id="instagram">Instagram</a>
+<a class="social" id="facebook">Facebook</a>
+<a class="social" id="x">X (Twitter)</a>
+</div>
 
+<a class="contact" id="telegram">Contact on Telegram</a>
+<a class="contact" id="whatsapp">Contact on WhatsApp</a>
+<a class="contact" id="email">Send Email</a>
+
+<div class="portfolio">
+<div class="box">Horizontal Edits<br>YouTube / Ads / Teasers</div>
+<div class="box">Vertical Edits<br>Reels / Shorts</div>
+<div class="box">Medical Edits</div>
+<div class="box">Graphic Design</div>
+</div>
+
+<div class="footer-text">
+Every business today needs visibility to grow and scale. Consistent content creation and social media presence are key factors for success. If you want to grow your brand, feel free to contact me.
+</div>
+
+</div>
 </div>
 
 <script>
-// لینک‌ها فقط اینجا تغییر می‌کنن
 const links = {
-instagram: "https://instagram.com/yourpage",
-youtube: "https://youtube.com/yourchannel",
-telegram: "https://t.me/yourid",
-whatsapp: "https://wa.me/0000000000",
-portfolio: "https://yourportfolio.com",
-email: "mailto:youremail@gmail.com"
+linkedin:"https://www.linkedin.com/in/mahmood-damghani-439522b5/",
+instagram:"https://instagram.com//visual.mahmood/",
+facebook:"https://www.facebook.com/share/1MTZ4CeWMi/?mibextid=wwXIfr",
+x:"https://x.com/visual_mahmood",
+telegram:"https://t.me/mahdamghani",
+whatsapp:"https://wa.me/+989941915102",
+email:"mailto:mahmooddamghani@gmail.com"
 };
 
-// اتصال لینک‌ها
+document.getElementById("linkedin").href = links.linkedin;
 document.getElementById("instagram").href = links.instagram;
-document.getElementById("youtube").href = links.youtube;
+document.getElementById("facebook").href = links.facebook;
+document.getElementById("x").href = links.x;
 document.getElementById("telegram").href = links.telegram;
 document.getElementById("whatsapp").href = links.whatsapp;
-document.getElementById("portfolio").href = links.portfolio;
 document.getElementById("email").href = links.email;
 </script>
 
