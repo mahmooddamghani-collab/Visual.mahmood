@@ -17,6 +17,7 @@ align-items:center;
 min-height:100vh;
 }
 
+/* کارت اصلی */
 .card{
 width:90%;
 max-width:420px;
@@ -29,17 +30,32 @@ text-align:center;
 box-shadow:0 0 30px rgba(0,0,0,0.6);
 }
 
+/* عکس پروفایل - مهم */
+.profile{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:0 auto 15px auto;
+border:2px solid rgba(255,255,255,0.2);
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* اسم */
 h1{
 margin:10px 0 0;
 font-size:22px;
 }
 
+/* زیرعنوان */
 p{
 margin:5px 0 20px;
 opacity:0.7;
 font-size:13px;
 }
 
+/* دکمه‌ها */
 .btn{
 display:block;
 margin:10px 0;
@@ -56,19 +72,6 @@ transition:0.3s;
 background:rgba(255,255,255,0.2);
 transform:scale(1.03);
 }
-
-.logo{
-width:70px;
-height:70px;
-border-radius:50%;
-background:linear-gradient(45deg,#ff00cc,#3333ff);
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
-margin:auto;
-font-size:20px;
-}
 </style>
 </head>
 
@@ -76,11 +79,13 @@ font-size:20px;
 
 <div class="card">
 
+<!-- پروفایل -->
 <img src="logo.png" class="profile">
 
 <h1>Mahmood Damghani</h1>
 <p>Video Editor | Motion Designer</p>
 
+<!-- دکمه‌ها -->
 <a class="btn" id="instagram" target="_blank">📷 Instagram</a>
 <a class="btn" id="youtube" target="_blank">▶️ YouTube</a>
 <a class="btn" id="telegram" target="_blank">✈️ Telegram</a>
@@ -91,9 +96,7 @@ font-size:20px;
 </div>
 
 <script>
-// =====================
-// 🔥 فقط اینجا لینک‌ها را تغییر بده
-// =====================
+// لینک‌ها فقط اینجا تغییر می‌کنن
 const links = {
 instagram: "https://instagram.com/yourpage",
 youtube: "https://youtube.com/yourchannel",
@@ -103,7 +106,7 @@ portfolio: "https://yourportfolio.com",
 email: "mailto:youremail@gmail.com"
 };
 
-// اتصال لینک‌ها به دکمه‌ها
+// اتصال لینک‌ها
 document.getElementById("instagram").href = links.instagram;
 document.getElementById("youtube").href = links.youtube;
 document.getElementById("telegram").href = links.telegram;
