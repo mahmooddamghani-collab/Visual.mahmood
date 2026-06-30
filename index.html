@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahmood Damghani</title>
+
+<style>
+body{
+margin:0;
+font-family: Arial;
+background:#0b0b10;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:rgba(255,255,255,0.05);
+backdrop-filter: blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:20px;
+padding:25px;
+text-align:center;
+box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
+
+h1{
+margin:10px 0 0;
+font-size:22px;
+}
+
+p{
+margin:5px 0 20px;
+opacity:0.7;
+font-size:13px;
+}
+
+.btn{
+display:block;
+margin:10px 0;
+padding:12px;
+border-radius:12px;
+text-decoration:none;
+color:white;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.btn:hover{
+background:rgba(255,255,255,0.2);
+transform:scale(1.03);
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:50%;
+background:linear-gradient(45deg,#ff00cc,#3333ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+margin:auto;
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="logo">MD</div>
+
+<h1>Mahmood Damghani</h1>
+<p>Video Editor | Motion Designer</p>
+
+<a class="btn" id="instagram" target="_blank">📷 Instagram</a>
+<a class="btn" id="youtube" target="_blank">▶️ YouTube</a>
+<a class="btn" id="telegram" target="_blank">✈️ Telegram</a>
+<a class="btn" id="whatsapp" target="_blank">💬 WhatsApp</a>
+<a class="btn" id="portfolio" target="_blank">🌐 Portfolio</a>
+<a class="btn" id="email">📧 Email</a>
+
+</div>
+
+<script>
+// =====================
+// 🔥 فقط اینجا لینک‌ها را تغییر بده
+// =====================
+const links = {
+instagram: "https://instagram.com/yourpage",
+youtube: "https://youtube.com/yourchannel",
+telegram: "https://t.me/yourid",
+whatsapp: "https://wa.me/0000000000",
+portfolio: "https://yourportfolio.com",
+email: "mailto:youremail@gmail.com"
+};
+
+// اتصال لینک‌ها به دکمه‌ها
+document.getElementById("instagram").href = links.instagram;
+document.getElementById("youtube").href = links.youtube;
+document.getElementById("telegram").href = links.telegram;
+document.getElementById("whatsapp").href = links.whatsapp;
+document.getElementById("portfolio").href = links.portfolio;
+document.getElementById("email").href = links.email;
+</script>
+
+</body>
+</html>
